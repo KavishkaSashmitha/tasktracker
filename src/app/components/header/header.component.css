@@ -1,0 +1,10 @@
+header {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 {
+  margin-left: 20px;
+  color: #fff5e4;
+}
