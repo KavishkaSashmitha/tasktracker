@@ -10,8 +10,13 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class HeaderComponent {
   title: string = 'Task-Tracker';
+  showTaskForm: boolean = false;
 
   toggleAddTask() {
-    console.log('toggle');
+    this.showTaskForm = !this.showTaskForm;
+  }
+
+  onTaskAdded() {
+    this.showTaskForm = false;
   }
 }

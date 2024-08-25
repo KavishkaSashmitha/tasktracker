@@ -1,0 +1,89 @@
+/* Container to hold the main content and sidebar */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Main content area on the left */
+.main-content {
+  flex-grow: 1; /* Take up the remaining space */
+  padding: 20px;
+  background-color: #f4f4f4;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  overflow: auto; /* Allow scrolling if content overflows */
+  position: relative; /* For positioning the header inside */
+}
+
+/* Sidebar on the right */
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  background-color: #6a9c89;
+  padding: 20px;
+  color: #c1d8c3;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  margin-bottom: 15px;
+}
+
+.task-name {
+  font-size: 18px; /* Adjust size for subheading */
+  font-weight: bold; /* Make it bold for emphasis */
+  color: #c1d8c3; /* Dark text color */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
+
+.task-name:hover {
+  color: #cd5c08;
+  cursor: pointer;
+}
+.task-name:active {
+  background-color: white;
+}
+.icon {
+  width: 100vw;
+  margin-left: auto;
+  align-items: right;
+}
+/* Icon button styles */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #cd5c08; /* Adjust the icon color to ensure visibility */
+  padding: 10px; /* Add padding around the button */
+}
+
+/* Optional: Add hover effect for the button */
+.icon-button:hover i {
+  color: #c1d8c3; /* Change color on hover */
+}
+
+.icon-button i {
+  font-size: 20px; /* Adjust the icon size */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Adjust height accordingly */
+  }
+
+  .main-content {
+    padding: 10px; /* Reduce padding on small screens */
+  }
+}

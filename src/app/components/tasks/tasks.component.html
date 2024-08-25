@@ -1,1 +1,22 @@
-<p>tasks works!</p>
+<div class="container">
+  <div class="sidebar">
+    <ul class="task-list">
+      <li
+        *ngFor="let task of tasks"
+        [ngClass]="{ 'task-name': true, active: task.active }"
+        (click)="activateTask(task)"
+      >
+        {{ task.name }}
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="icon"></div>
+    <p>
+      {{ selectedTask?.description }}
+      <button class="icon-button" (click)="editTask()">
+        <i class="fas fa-pen-to-square"></i>
+      </button>
+    </p>
+  </div>
+</div>
