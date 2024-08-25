@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
+import { Router } from '@angular/router'; // Import the correct module for Router
 
 @Component({
   selector: 'app-header',
@@ -11,12 +12,9 @@ import { ButtonComponent } from '../button/button.component';
 export class HeaderComponent {
   title: string = 'Task-Tracker';
   showTaskForm: boolean = false;
+  constructor(private router: Router) {}
 
   toggleAddTask() {
-    this.showTaskForm = !this.showTaskForm;
-  }
-
-  onTaskAdded() {
-    this.showTaskForm = false;
+    this.router.navigate(['/task-form']);
   }
 }
